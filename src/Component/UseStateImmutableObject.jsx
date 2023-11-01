@@ -1,27 +1,28 @@
-import { useState } from "react";
+import {useState} from "react";
 
 const UseStateImmutableObject = () => {
-    let [myObj,setMyObj] = useState({
+    const [myObj,setMyObj] = useState({
         key1 : "value1",
         key2 : "value2",
-        key3 : "value3"
+        key3 : "value3",
+        key4 : "value4"
     })
-    let {key1,key2,key3} = myObj
-    const objValueChange = () =>{
-        setMyObj(
-            prevObj =>({
-                ...prevObj,
-                key1 : "new value key1",
-                key2 : "new value key2",
-            })
-        )
+    const {key1,key2,key3,key4} = myObj;
+    const changeObjValue = () =>{
+        setMyObj(prevObject=>({
+            ...prevObject,
+            key1: "new value for key1",
+            key2 : "new value for key2",
+            key3: "new value for key3"
+        }))
     }
     return (
         <div>
             <h1>{key1}</h1>
             <h1>{key2}</h1>
             <h1>{key3}</h1>
-            <button onClick={objValueChange} >changevalue</button>
+            <h1>{key4}</h1>
+            <button onClick={changeObjValue} >ChangeValue</button>
         </div>
     );
 };

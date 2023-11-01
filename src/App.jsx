@@ -1,11 +1,15 @@
 import './App.css';
-import UseStateImmutableObject from './Component/UseStateImmutableObject';
+import UseStateFromControlle from "./Component/UseStateFromControlle.jsx";
+// import UseStateWithImmutableArray from "./Component/UseStateWithImmutableArray.jsx";
+// import UseStateImmutableObject from './Component/UseStateImmutableObject';
 // import UseStateUndesting from "./Component/UseStateUndesting.jsx";
 const App = () => {
     return (
         <div>
             {/* <UseStateUndesting/> */}
-            <UseStateImmutableObject/>
+            {/*<UseStateImmutableObject/>*/}
+            {/*<UseStateWithImmutableArray/>*/}
+            <UseStateFromControlle/>
         </div>
     );
 };
